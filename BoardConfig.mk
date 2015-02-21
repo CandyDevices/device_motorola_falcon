@@ -25,6 +25,13 @@ TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsd
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_CONFIG := falcon_defconfig
 
+# Rom Optimization
+USE_GRAPHITE := true
+USE_FSTRICT_FLAGS := true
+FSTRICT_ALIASING_WARNING_LEVEL := 3
+USE_BINARY_FLAGS := true
+USE_EXTRA_CLANG_FLAGS := true
+USE_LTO := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
