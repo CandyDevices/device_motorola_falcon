@@ -26,7 +26,16 @@ BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
 TARGET_KERNEL_CONFIG := falcon_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8-sm/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
+# Rom Optimization
+USE_GRAPHITE := true
+USE_FSTRICT_FLAGS := true
+FSTRICT_ALIASING_WARNING_LEVEL := 3
+USE_BINARY_FLAGS := true
+USE_EXTRA_CLANG_FLAGS := true
+USE_LTO := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
