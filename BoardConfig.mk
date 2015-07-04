@@ -28,6 +28,16 @@ TARGET_BOARD_INFO_FILE := device/motorola/falcon/board-info.txt
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_CONFIG := falcon_defconfig
 
+# Rom Optimization
+USE_GRAPHITE := true
+USE_FSTRICT_FLAGS := true
+FSTRICT_ALIASING_WARNING_LEVEL := 3
+USE_BINARY_FLAGS := true
+USE_EXTRA_CLANG_FLAGS := true
+USE_LTO := true
+CANDY_ARM_OPT_LEVEL := -O3
+CANDY_THUMB_OPT_LEVEL := -O3
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_falcon.c
