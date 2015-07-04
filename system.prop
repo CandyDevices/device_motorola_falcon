@@ -1,5 +1,5 @@
 # system.prop for falcon
-ro.product.device=Moto G
-ro.product.model=falcon
+ro.product.device=falcon
+ro.product.model=Moto G
 # radio
 rild.libargs=-d /dev/smd0
